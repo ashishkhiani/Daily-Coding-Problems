@@ -1,6 +1,6 @@
 import unittest
 
-from problem_166.solution import Iterator
+from challenges.problem_166.solution import Iterator
 
 
 class IteratorTest(unittest.TestCase):
