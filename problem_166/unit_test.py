@@ -54,7 +54,7 @@ class IteratorTest(unittest.TestCase):
 
     def test_input_with_empty_array(self):
         """Tests the case when there is an empty array with other arrays"""
-        _input = [[], [1], [2], [3, 4]]
+        _input = [[], [1], [], [2], [], [3, 4], []]
 
         iterator = Iterator(_input)
 
@@ -62,4 +62,25 @@ class IteratorTest(unittest.TestCase):
         self.assertEqual(iterator.next(), 2)
         self.assertEqual(iterator.next(), 3)
         self.assertEqual(iterator.next(), 4)
+
+        self.assertFalse(iterator.has_next())
+
+        with self.assertRaises(StopIteration):
+            iterator.next()
+
+    def test_input_with_one_array(self):
+        """Tests the case where the input is an array that contains one array of values"""
+        _input = [[1, 2, 3, 4]]
+
+        iterator = Iterator(_input)
+
+        self.assertEqual(iterator.next(), 1)
+        self.assertEqual(iterator.next(), 2)
+        self.assertEqual(iterator.next(), 3)
+        self.assertEqual(iterator.next(), 4)
+
+        self.assertFalse(iterator.has_next())
+
+        with self.assertRaises(StopIteration):
+            iterator.next()
 
