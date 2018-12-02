@@ -15,11 +15,10 @@ def comparator(a, b):
         return -1
 
 
-def list_to_string(_list):
-    return ''.join(map(str, _list))
+def list_to_int(_list):
+    return int(''.join(map(str, _list)))
 
 
 def largest_int(_input):
     _output = sorted(_input, key=functools.cmp_to_key(comparator))
-    return list_to_string(_output)
-
+    return list_to_int(_output)
