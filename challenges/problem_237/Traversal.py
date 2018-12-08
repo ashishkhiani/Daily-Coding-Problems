@@ -26,6 +26,3 @@ class Traversal(object):
                 print(child.name(), end=" ")
             else:
                 Traversal.right_preorder_traversal(child)
-
-
-
