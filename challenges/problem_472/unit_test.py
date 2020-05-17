@@ -61,3 +61,10 @@ class DecodedMessageCounter(unittest.TestCase):
         expected = ['jjjjj']
         actual = decode_message(_input)
         self.assertEqual(sorted(expected), sorted(actual))
+
+    def test_example_6(self):
+        """Tests another example"""
+        _input = '17124'
+        expected = ['agabd', 'qabd', 'agld', 'qld', 'agax', 'qax']
+        actual = decode_message(_input)
+        self.assertEqual(sorted(expected), sorted(actual))
