@@ -9,9 +9,6 @@ class NearestLargerNumber(unittest.TestCase):
         actual = find_nearest_larger_number(_input[0], _input[1])
         self.assertEqual(expected, actual)
 
-        actual = find_nearest_larger_number_constant_time(_input[0], _input[1])
-        self.assertEqual(expected, actual)
-
     def test_example_1(self):
         """Tests given example"""
         _input = [4, 1, 3, 5, 6], 0
