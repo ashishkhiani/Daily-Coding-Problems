@@ -1,4 +1,6 @@
-from challenges.config import time_complexity, POLYNOMIAL, LINEAR
+LINEAR = 'linear'
+POLYNOMIAL = 'polynomial'
+time_complexity = LINEAR
 
 
 def problem1_polynomial(num_list, k):
