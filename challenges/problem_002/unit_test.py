@@ -1,5 +1,5 @@
 import unittest
-from challenges.problem_2.solution import problem_2
+from challenges.problem_002.solution import problem_2
 
 
 class Product(unittest.TestCase):

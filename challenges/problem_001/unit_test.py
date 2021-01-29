@@ -1,6 +1,6 @@
 import unittest
 
-from challenges.problem_1.solution import problem_1
+from challenges.problem_001.solution import problem_1
 
 
 class SumsToK(unittest.TestCase):
